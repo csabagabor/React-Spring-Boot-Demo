@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  spring-backend:
+    image: spring-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - demo-spring
+
+networks:
+  demo-spring:
